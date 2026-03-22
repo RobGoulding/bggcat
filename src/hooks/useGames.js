@@ -5,7 +5,7 @@ export function useGames() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/games.json')
+    fetch(`${import.meta.env.BASE_URL}games.json`)
       .then((res) => res.json())
       .then((data) => {
         setGames(data)

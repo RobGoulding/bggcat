@@ -20,7 +20,7 @@ export default function GameCard({ game, isExpanded, onSelect }) {
   const complexityLabel = getComplexityLabel(game.complexity)
   const complexityClasses = getComplexityClasses(complexityLabel)
   const [imgError, setImgError] = useState(false)
-  const imageUrl = game.image ? `/images/${game.image}` : game.bggImageUrl || null
+  const imageUrl = game.image ? `${import.meta.env.BASE_URL}images/${game.image}` : game.bggImageUrl || null
   const showImage = imageUrl && !imgError
 
   return (
